@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap');
+@import "tailwindcss";
+@import "./themes.css";
+
+@theme {
+
+
+    /*
+        Color Palette.
+    */
+
+    /* Primary palette */
+    --color-primary: var(--primary);
+    --color-primary-light: var(--primary-light);
+    --color-primary-dark: var(--primary-dark);
+    --color-primary-hover: var(--primary-hover);
+
+    /* Secondary palette */
+    --color-secondary: var(--secondary);
+    --color-secondary-light: var(--secondary-light);
+    --color-secondary-dark: var(--secondary-dark);
+    --color-secondary-hover: var(--secondary-hover);
+
+    /* Neutral palette */
+    --color-bg: var(--bg);
+    --color-surface: var(--surface);
+    --color-border: var(--border);
+    --color-text: var(--text);
+
+    /* "On" colors (for text/icons on backgrounds) */
+    --color-on-bg: var(--on-bg);
+    --color-on-surface: var(--on-surface);
+    --color-on-primary: var(--on-primary);
+    --color-on-secondary: var(--on-secondary);
+
+    /* Status colors */
+    --color-success: var(--success);
+    --color-danger: var(--danger);
+    --color-warning: var(--warning);
+    --color-info: var(--info);
+}
+
+/*
+ * some globals
+*/
+
+body {
+    @apply bg-bg text-text;
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}

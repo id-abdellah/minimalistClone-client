@@ -1,0 +1,71 @@
+:root[data-theme="light"] {
+    /* Primary palette */
+    --primary: #2c5530;
+    --primary-light: #3e7a44;
+    --primary-dark: #1d3720;
+    --primary-hover: #244626;
+
+    /* Secondary palette */
+    --secondary: #848fa5;
+    --secondary-light: #a2adc2;
+    --secondary-dark: #5d6473;
+    --secondary-hover: #6d7992;
+
+    /* Neutral palette */
+    --bg: #f9fafbd5;
+    --surface: #ffffff;
+    --border: #e5e7eb;
+    --text: #222c36;
+
+    /* "On" colors (for text/icons on backgrounds) */
+    --on-bg: #222c36;
+    /* Text on background */
+    --on-surface: #222c36;
+    /* Text on surface */
+    --on-primary: #ffffff;
+    /* Text on primary */
+    --on-secondary: #ffffff;
+    /* Text on secondary */
+
+    /* Status colors */
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #f59e42;
+    --info: #3b82f6;
+}
+
+:root[data-theme="dark"] {
+    /* Primary palette */
+    --primary: #3e7a44;
+    --primary-light: #4fa85a;
+    --primary-dark: #244626;
+    --primary-hover: #2c5530;
+
+    /* Secondary palette */
+    --secondary: #a2adc2;
+    --secondary-light: #c3cbe0;
+    --secondary-dark: #6d7992;
+    --secondary-hover: #848fa5;
+
+    /* Neutral palette */
+    --bg: #181c20;
+    --surface: #23272f;
+    --border: #353b45;
+    --text: #f3f4f6;
+
+    /* "On" colors (for text/icons on backgrounds) */
+    --on-bg: #f3f4f6;
+    /* Text on background */
+    --on-surface: #f3f4f6;
+    /* Text on surface */
+    --on-primary: #ffffff;
+    /* Text on primary */
+    --on-secondary: #23272f;
+    /* Text on secondary */
+
+    /* Status colors */
+    --success: #22c55e;
+    --danger: #ef4444;
+    --warning: #fbbf24;
+    --info: #60a5fa;
+}
