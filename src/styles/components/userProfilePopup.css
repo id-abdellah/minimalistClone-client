@@ -1,0 +1,29 @@
+#userProfileWrapper {
+    anchor-name: --userProfileAnchor;
+}
+
+#userProfilePopup {
+    position-anchor: --userProfileAnchor;
+
+    /* positioning according to anchor element */
+    inset: auto;
+    top: anchor(bottom);
+    left: anchor(left);
+    margin-top: 6px;
+    width: anchor-size(width);
+
+    /* just fade in/out */
+    transition: display 0.5s, opacity 0.5s;
+    transition-behavior: allow-discrete;
+    opacity: 0;
+}
+
+#userProfilePopup:popover-open {
+    /* just fade in/out */
+    display: block;
+    opacity: 1;
+
+    @starting-style {
+        opacity: 0;
+    }
+}

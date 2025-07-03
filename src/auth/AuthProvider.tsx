@@ -39,6 +39,7 @@ export function AuthProvider({ children }: React.PropsWithChildren) {
     function logout(): void {
         localStorage.removeItem("token");
         setIsLoggedIn(false);
+        location.reload()
     }
 
 

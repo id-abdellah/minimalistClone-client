@@ -1,1 +1,27 @@
-{}
+{
+    "auth": {
+        "logout": "تسجيل الخروج",
+        "loging": "تسجيل الدخول",
+        "singup": "إنشاء حساب"
+    },
+    "upload": {
+        "upload": "رفع",
+        "selectMsg": "اختر ملفًا للرفع"
+    },
+    "sidebar": {
+        "createList": "إنشاء قائمة",
+        "create": "إنشاء",
+        "cancel": "إلغاء",
+        "langEn": "الإنجليزية",
+        "langAr": "العربية",
+        "noLists": "ابدأ بإنشاء قائمة جديدة",
+        "listnameInputPlaceholder": "اسم القائمة ..."
+    },
+    "mainView": {
+        "noListSelected": "اختر أو أنشئ قائمة",
+        "deleteListConfirmation": "هل أنت متأكد من حذف هذه القائمة؟",
+        "delete": "حذف",
+        "addTask": "إضافة مهمة",
+        "addTaskInputPlaceholder": "ما الذي ستفعله ..."
+    }
+}

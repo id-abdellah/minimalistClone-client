@@ -1,1 +1,27 @@
-{}
+{
+    "auth": {
+        "logout": "Log out",
+        "loging": "Log in",
+        "singup": "Sign up"
+    },
+    "upload": {
+        "upload": "Upload",
+        "selectMsg": "Pick a file to upload"
+    },
+    "sidebar": {
+        "createList": "Create List",
+        "create": "Create",
+        "cancel": "Cancel",
+        "langEn": "English",
+        "langAr": "Arabic",
+        "noLists": "Start by creating new list",
+        "listnameInputPlaceholder": "List name ..."
+    },
+    "mainView": {
+        "noListSelected": "Select / Create a list",
+        "deleteListConfirmation": "Are you sure about deletig this list",
+        "delete": "Delete",
+        "addTask": "Add Task",
+        "addTaskInputPlaceholder": "What you gonna do ..."
+    }
+}

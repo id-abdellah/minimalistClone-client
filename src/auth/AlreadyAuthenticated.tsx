@@ -14,7 +14,7 @@ export default function AlreadyAuthenticated({ children }: React.PropsWithChildr
     const { isLoggedIn, doneChecking } = auth;
 
     if (isLoggedIn && doneChecking) {
-        return <Navigate to={"/lists"} replace />
+        return <Navigate to={"/"} replace />
     }
 
     return (

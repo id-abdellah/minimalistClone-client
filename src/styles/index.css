@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Hand:wght@400..700&display=swap');
 @import "tailwindcss";
+@plugin "tailwind-scrollbar";
+
+@plugin "daisyui" {
+    prefix: "d-";
+    styled: false;
+    styled: false;
+    themes: false;
+    base: false;
+    utils: true;
+    logs: false;
+}
+
+
+
+@import "./components/userProfilePopup.css";
 @import "./themes.css";
 
 @theme {
@@ -48,10 +63,4 @@ body {
     @apply bg-bg text-text;
     line-height: 1.5;
     min-height: 100vh;
-}
-
-button,
-input,
-textarea {
-    font: inherit;
 }

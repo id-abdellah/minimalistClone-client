@@ -1,4 +1,4 @@
-import { Navigate, Route, Routes } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/home";
 import LoginPage from "./pages/login";
 import SignupPage from "./pages/signup";
@@ -7,42 +7,67 @@ import NotFoundPage from "./pages/notFound";
 import AlreadyAuthenticated from "./auth/AlreadyAuthenticated";
 import { useContext, useEffect } from "react";
 import GlobalContext from "./contexts/globalContext";
+import Tasks from "./pages/home/tasks";
+import NoListSelected from "./shared/NoListSelected";
+
+const router = createBrowserRouter([
+   {
+      path: "/",
+      element: <>
+         <ProtectedRoute>
+            <Home />
+         </ProtectedRoute>
+      </>,
+      children: [
+         {
+            index: true,
+            element: <NoListSelected />
+         },
+         {
+            path: "/:list_id",
+            element: <Tasks />
+         }
+      ]
+   },
+   {
+      path: "/login",
+      element: <>
+         <AlreadyAuthenticated>
+            <LoginPage />
+         </AlreadyAuthenticated>
+      </>
+   },
+   {
+      path: "/signup",
+      element: <>
+         <AlreadyAuthenticated>
+            <SignupPage />
+         </AlreadyAuthenticated>
+      </>
+   },
+   {
+      path: "*",
+      element: <NotFoundPage />
+   }
+])
 
 function App() {
 
    const globalState = useContext(GlobalContext);
    if (!globalState) throw new Error("GlobalContext not provided");
 
-   const { lang, theme } = globalState
+   const { lang, theme, changeLang } = globalState
 
    useEffect(() => {
       document.documentElement.setAttribute("lang", lang);
       document.documentElement.setAttribute("data-theme", theme);
       document.documentElement.setAttribute("dir", lang === "en" ? "ltr" : "rtl");
-   }, [lang, theme])
+   }, [lang, theme, changeLang])
+
 
    return (
       <div>
-         <Routes>
-            <Route path="/" element={<Navigate to="/lists" />} />
-            <Route path="/lists" element={
-               <ProtectedRoute>
-                  <Home />
-               </ProtectedRoute>
-            } />
-            <Route path="/login" element={
-               <AlreadyAuthenticated>
-                  <LoginPage />
-               </AlreadyAuthenticated>
-            } />
-            <Route path="/signup" element={
-               <AlreadyAuthenticated>
-                  <SignupPage />
-               </AlreadyAuthenticated>
-            } />
-
-            <Route path="*" element={<NotFoundPage />} />
-         </Routes>
+         <RouterProvider router={router} />
       </div>
    )
 }
